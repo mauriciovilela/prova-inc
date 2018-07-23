@@ -15,7 +15,7 @@ public class Config extends WebMvcConfigurerAdapter {
 	@Override
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/api/**")
-            .allowedOrigins("http://localhost:4200")
+            .allowedOrigins("http://localhost:4200", "http://ubuntudev.eastus.cloudapp.azure.com:4200")
             .allowedMethods("PUT", "DELETE", "POST", "GET")
             .allowCredentials(false).maxAge(3600);
     }
