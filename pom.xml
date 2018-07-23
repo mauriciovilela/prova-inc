@@ -93,7 +93,7 @@
 							<outputDirectory>${basedir}/target/classes/static/</outputDirectory>
 							<resources>
 								<resource>
-									<directory>${basedir}/src/main/webapp/prova-front/dist/prova-front</directory>
+									<directory>${basedir}/src/main/webapp/prova-front/dist</directory>
 								</resource>
 							</resources>
 						</configuration>

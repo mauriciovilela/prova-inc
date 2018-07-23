@@ -1,0 +1,152 @@
+{
+	"info": {
+		"_postman_id": "474d6efc-403b-4849-acf6-c1c464aa7605",
+		"name": "Prova",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "POST clientes",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"nome\": \"Joao da silva\",\n\t\"uf\": \"MG\",\n\t\"cidade\": \"Uberlandia\",\n\t\"dataNascimento\": \"2017-10-01T01:00+02:00\"\n}"
+				},
+				"url": {
+					"raw": "http://ubuntudev.eastus.cloudapp.azure.com:8090/api/clientes",
+					"protocol": "http",
+					"host": [
+						"ubuntudev",
+						"eastus",
+						"cloudapp",
+						"azure",
+						"com"
+					],
+					"port": "8090",
+					"path": [
+						"api",
+						"clientes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT clientes",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\": 1,\n\t\"nome\": \"Joao da silva\",\n\t\"uf\": \"MG\",\n\t\"cidade\": \"Uberlandia\",\n\t\"dataNascimento\": \"2017-10-01T01:00+02:00\"\n}"
+				},
+				"url": {
+					"raw": "http://ubuntudev.eastus.cloudapp.azure.com:8090/api/clientes",
+					"protocol": "http",
+					"host": [
+						"ubuntudev",
+						"eastus",
+						"cloudapp",
+						"azure",
+						"com"
+					],
+					"port": "8090",
+					"path": [
+						"api",
+						"clientes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET clientes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://ubuntudev.eastus.cloudapp.azure.com:8090/api/clientes",
+					"protocol": "http",
+					"host": [
+						"ubuntudev",
+						"eastus",
+						"cloudapp",
+						"azure",
+						"com"
+					],
+					"port": "8090",
+					"path": [
+						"api",
+						"clientes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET clientes ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://ubuntudev.eastus.cloudapp.azure.com:8090/api/clientes/1",
+					"protocol": "http",
+					"host": [
+						"ubuntudev",
+						"eastus",
+						"cloudapp",
+						"azure",
+						"com"
+					],
+					"port": "8090",
+					"path": [
+						"api",
+						"clientes",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE clientes ID",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://ubuntudev.eastus.cloudapp.azure.com:8090/api/clientes/1",
+					"protocol": "http",
+					"host": [
+						"ubuntudev",
+						"eastus",
+						"cloudapp",
+						"azure",
+						"com"
+					],
+					"port": "8090",
+					"path": [
+						"api",
+						"clientes",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
