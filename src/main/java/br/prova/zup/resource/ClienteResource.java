@@ -42,9 +42,6 @@ public class ClienteResource {
     @Timed
     public ResponseEntity<ClienteDTO> criar(@Valid @RequestBody ClienteDTO clienteDTO) throws URISyntaxException {
         log.debug("Novo : {}", clienteDTO);
-        if (clienteDTO.getId() != null) {
-//            throw new BadRequestAlertException("A new cliente cannot already have an ID", ENTITY_NAME, "idexists");
-        }
         ClienteDTO result = clienteService.salvar(clienteDTO);
         return ResponseEntity.created(new URI("/api/clientes/" + result.getId()))
             .body(result);
@@ -53,9 +50,6 @@ public class ClienteResource {
     @PutMapping("/clientes")
     @Timed
     public ResponseEntity<ClienteDTO> atualizar(@Valid @RequestBody ClienteDTO clienteDTO) throws URISyntaxException {
-        if (clienteDTO.getId() == null) {
-//            throw new BadRequestAlertException("Invalid id", ENTITY_NAME, "idnull");
-        }
         ClienteDTO result = clienteService.salvar(clienteDTO);
         return ResponseEntity.ok()
             .body(result);

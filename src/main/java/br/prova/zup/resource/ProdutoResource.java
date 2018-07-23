@@ -42,9 +42,6 @@ public class ProdutoResource {
     @Timed
     public ResponseEntity<ProdutoDTO> criar(@Valid @RequestBody ProdutoDTO produtoDTO) throws URISyntaxException {
         log.debug("Novo : {}", produtoDTO);
-        if (produtoDTO.getId() != null) {
-//            throw new BadRequestAlertException("A new produto cannot already have an ID", ENTITY_NAME, "idexists");
-        }
         ProdutoDTO result = produtoService.save(produtoDTO);
         return ResponseEntity.created(new URI("/api/produtos/" + result.getId()))
             .body(result);
@@ -53,9 +50,6 @@ public class ProdutoResource {
     @PutMapping("/produtos")
     @Timed
     public ResponseEntity<ProdutoDTO> atualizar(@Valid @RequestBody ProdutoDTO produtoDTO) throws URISyntaxException {
-        if (produtoDTO.getId() == null) {
-//            throw new BadRequestAlertException("Invalid id", ENTITY_NAME, "idnull");
-        }
         ProdutoDTO result = produtoService.save(produtoDTO);
         return ResponseEntity.ok()
             .body(result);

@@ -42,9 +42,6 @@ public class PedidoResource {
     @Timed
     public ResponseEntity<PedidoDTO> criar(@Valid @RequestBody PedidoDTO pedidoDTO) throws URISyntaxException {
         log.debug("Novo : {}", pedidoDTO);
-        if (pedidoDTO.getId() != null) {
-//            throw new BadRequestAlertException("A new pedido cannot already have an ID", ENTITY_NAME, "idexists");
-        }
         PedidoDTO result = pedidoService.save(pedidoDTO);
         return ResponseEntity.created(new URI("/api/pedidos/" + result.getId()))
             .body(result);
@@ -53,9 +50,6 @@ public class PedidoResource {
     @PutMapping("/pedidos")
     @Timed
     public ResponseEntity<PedidoDTO> atualizar(@Valid @RequestBody PedidoDTO pedidoDTO) throws URISyntaxException {
-        if (pedidoDTO.getId() == null) {
-//            throw new BadRequestAlertException("Invalid id", ENTITY_NAME, "idnull");
-        }
         PedidoDTO result = pedidoService.save(pedidoDTO);
         return ResponseEntity.ok()
             .body(result);
