@@ -1,4 +1,4 @@
-# Prova Zup
+# spring
 
 Pré requisitos e ferramentas para rodar o ambiente:
 
